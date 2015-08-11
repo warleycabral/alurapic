@@ -1,9 +1,9 @@
 angular.module('alurapic').controller('FotosController', function($scope, $http){
 
     $scope.fotos = [];
-    //$scope.fotos = $http.get('v1/fotos'); //não funciona dessa forma
+    //$scope.fotos = $http.get('v1/fotos'); //funciona, mas não é o correto
     
-    $http.get('v1/fotos')
+    $http.get('/v1/fotos')
     .success(function(fotos){
         $scope.fotos = fotos;
     })
@@ -13,9 +13,11 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
     
     /*var promise = $http.get('v1/fotos');
     
-    promise.then(function(retorno){
+    promise
+    .then(function(retorno){
         $scope.fotos = retorno.data;
-    }).catch(function(error){
+    })
+    .catch(function(error){
         console.log(error);
     });*/
 });
