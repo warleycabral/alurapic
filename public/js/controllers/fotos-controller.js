@@ -3,6 +3,8 @@ angular.module('alurapic').controller('FotosController', function($scope, $http)
     $scope.fotos = [];
     //$scope.fotos = $http.get('v1/fotos'); //funciona, mas não é o correto
     
+    $scope.filtro = '';
+    
     $http.get('/v1/fotos')
     .success(function(fotos){
         $scope.fotos = fotos;
