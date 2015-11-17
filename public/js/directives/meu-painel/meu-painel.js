@@ -7,7 +7,7 @@ minhasDiretivas
 
     ddo.restrict = "AE";
     ddo.scope = {
-        titulo: '@title'
+        titulo: '@'
     };
     ddo.transclude = true;
     ddo.templateUrl = 'js/directives/meu-painel/meu-painel.html';

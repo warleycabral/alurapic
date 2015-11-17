@@ -17,7 +17,7 @@
 </div>
 
 <div class="row">
-    <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter:{titulo: filtro}" title="{{foto.titulo}}">
+    <meu-painel class="col-md-2 painel-animado" ng-repeat="foto in fotos | filter:{titulo: filtro}" titulo="{{foto.titulo}}">
         <minha-foto title="{{foto.titulo}}" url="{{foto.url}}"></minha-foto>
     </meu-painel>    
 </div>
